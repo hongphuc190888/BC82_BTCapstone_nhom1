@@ -1,0 +1,419 @@
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* công thức tính chiều dài và chiều cao của một thẻ html
+header{
+    /* height: 100vh;
+    background-color: black;
+    display: flex;
+    /* trục chính: trục ngang */
+/* trục phụ: trục dọc */
+/* justify-content: center ; */
+/* justify-content: space-between; */
+/* justify-content: flex-end; */
+/* align-items:center, end;(chỉ khi có chiều cao mới sử dụng đc) */
+/* justify-content: space-between; */
+/* flex-direction: column-reverse; */
+/* } */
+/* .header-logo{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+}
+
+.header-navigation{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+} */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.section-padding {
+  padding: 80px;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.204);
+}
+header .header-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  align-items: center;
+}
+header a {
+  color: white;
+  text-decoration: none;
+}
+header nav a:hover {
+  color: #e62b4a;
+}
+header nav .active a {
+  color: #e62b4a;
+}
+header nav li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 20px;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+header .header-content-logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.hero-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  align-content: center;
+  text-align: center;
+  background-image: url(./../img/home_slider.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 24px;
+}
+.hero-banner .hero-banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-banner button {
+  border: none;
+  padding: 15px 20px;
+  background-color: #e62b4a;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  width: 30%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.sub-title {
+  font-size: 25px;
+}
+.hero-banner h1 {
+  font-size: 75px;
+  line-height: 80px;
+  margin-bottom: 15px;
+}
+.hero-banner button:hover {
+  background-color: #af2239;
+  transition: all 0.5s;
+}
+.hero-banner i {
+  animation-name: arrowGoDown;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+/* animation css */
+.animate__animated.animate__backinDown {
+  --animate-duration: 2s;
+}
+
+/* This changes all the animations globally */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+/* .demo-posittion */
+/* .demo-position{
+    background-color: black;
+    height: 100vh;
+    position: relative;
+}
+.demo1{
+    width: 150px;
+    background-color: red;
+    height: 150px;
+    /* position: relative; */
+/* left right top bottom */
+/* right: -50px; */
+/* position: absolute;
+    top: 50%;
+    left:  50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 2;
+}
+.demo2{
+    background-color: blue;
+    width: 200px;
+    height: 200px; */
+/* transform: translateX(); trucj X Y */
+/* transform: rotate(45deg) xoay ; */
+/* transform: scale(); phong to thu nho */
+/* } */
+/* service */
+.service {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-align: center;
+}
+.service .sub-title {
+  color: #e62b4a;
+  font-size: 14px;
+}
+.service h2 {
+  font-size: 50px;
+}
+.service .service-title p:last-of-type {
+  color: #888888;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.service .service-content .content-item {
+  background-color: white;
+  height: 230px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.service .service-content .content-item i {
+  font-size: 50px;
+}
+.service .service-content .content-item p {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.service .service-content .content-item-wrapper {
+  padding: 0 10px;
+}
+/* before after */
+.demo-before-after {
+  background: pink;
+  height: 50vh;
+  position: relative;
+}
+/* .demo-before-after::after{
+    content: "Hom nay";
+} */
+.service .content-item {
+  position: relative;
+}
+.service .content-item:hover::before {
+  height: 100%;
+}
+.service .content-item::before {
+  content: "";
+  display: inline-block;
+  height: 0;
+  width: 5px;
+  background-color: #e62b4a;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.3s;
+}
+.service .slick-dots li button::before {
+  font-size: 15px;
+  color: white;
+}
+.service .slick-dots .slick-active button::before {
+  color: #e62b4a;
+}
+/* blog */
+.blog .blog-content {
+  display: grid;
+  /* (dùng để tạo cột)*/
+  grid-template-columns: repeat(4, 1fr);
+  /* dùng để tạo khoảng cách*/
+  gap: 20px;
+}
+.blog .blog-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(50%) contrast(50%);
+}
+.blog .blog-content .blog-content-item:first-of-type {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+.blog .blog-content .blog-content-item:last-of-type {
+  grid-column: 3 / span 2;
+  grid-row: 3 / span 2;
+}
+/* chia tỷ lệ nhờ calc */
+.blog .blog-content .blog-content-item {
+  position: relative;
+  overflow: hidden;
+}
+.blog .blog-content-item .overlay {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.356);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  opacity: 0;
+}
+.blog .blog-content-item .overlay .overlay-icon {
+  text-align: right;
+  transform: translateY(100px);
+  transition: all 0.5s;
+}
+.blog .blog-content-item .overlay .overlay-text {
+  transform: translateY(100px);
+  transition: all 0.5s;
+}
+.blog .blog-content-item :hover {
+  opacity: 1;
+  transition: all 0.3s;
+}
+.blog .blog-content-item :hover .overlay-icon {
+  transform: translateY(0);
+}
+.blog .blog-content-item :hover .overlay-text {
+  transform: translateY(0);
+}
+
+.blog {
+  background-color: white;
+}
+.blog .blog-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 30px;
+  font-weight: 400;
+}
+.blog .blog-title H2 {
+  padding: 15px 0;
+  font-size: 50px;
+}
+.blog .blog-title p:first-of-type {
+  font-size: 15px;
+  color: #888888;
+}
+.blog .blog-title p:last-of-type {
+  font-size: 20px;
+  color: #888888;
+  font-weight: 400;
+}
+/* number */
+.number {
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+}
+.number .number-content {
+  display: flex;
+}
+.number .number-content .number-item {
+  flex: 1;
+  text-align: center;
+  font-size: 25px;
+  color: #888888;
+}
+.number .number-content .number-item h3 {
+  color: white;
+  font-size: 50px;
+}
+.digital {
+  background-image: url(./../img/bussiness_img_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  background-attachment: fixed;
+}
+.digital .digital-title p:first-of-type {
+  color: #e62b4a;
+  font-size: 15px;
+}
+.digital .digital-title p:last-of-type {
+  color: #888888;
+  font-size: 20px;
+  font-weight: 600;
+}
+.contact {
+  text-align: center;
+}
+.digital .digital-content video {
+  width: 100%;
+  padding: 20px 0;
+}
+.contact .contact-content {
+  display: flex;
+  margin-top: 10px;
+}
+.contact .contact-content-left {
+  width: 60%;
+  margin-right: 10px;
+}
+.contact .contact-content-right {
+  flex-direction: column;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.contact .contact-content-right input,
+.contact .contact-content-right textarea {
+  padding: 15px;
+  margin-bottom: 30px;
+}
+.contact .contact-content-right textarea {
+  flex: 1;
+  resize: none;
+}
+.contact .contact-content-right button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+@keyframes arrowGoDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+.back-to-top-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0;
+  padding: 5px;
+  visibility: hidden;
+  background-color: rgba(255, 0, 0, 0.625);
+}
+
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.contact-content-right button:hover {
+  background-color: #af2239;
+}
